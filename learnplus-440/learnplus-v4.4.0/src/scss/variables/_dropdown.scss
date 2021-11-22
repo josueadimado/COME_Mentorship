@@ -1,0 +1,16 @@
+$dropdown-spacer:                   .5rem !default;
+$dropdown-border-color:             $border-color !default;
+$dropdown-border-radius:            .1875rem !default;
+$dropdown-box-shadow:               0 5px 11px 0 rgba($body-color, .07) !default;
+$dropdown-transition:               opacity .2s cubic-bezier(.3, .5, .5, 1), margin-top .2s cubic-bezier(.1, .3, .8, 1), visibility .3s ease !default;
+
+$dropdown-link-color:               rgba($body-color, .7) !default;
+$dropdown-link-disabled-color:      rgba($body-color, .3) !default;
+$dropdown-link-hover-color:         rgba($body-color, .9) !default;
+$dropdown-link-hover-bg:            transparent !default;
+
+$dropdown-link-active-color:        $primary !default;
+$dropdown-link-active-bg:           transparent !default;
+
+$dropdown-item-padding-y:           .25rem !default;
+$dropdown-item-padding-x:           1rem !default;

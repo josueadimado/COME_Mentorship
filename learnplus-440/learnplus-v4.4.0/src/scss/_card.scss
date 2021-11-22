@@ -1,0 +1,114 @@
+/////////////
+// GENERAL //
+/////////////
+
+.card {
+  box-shadow: $card-box-shadow;
+}
+
+.form-row .card.form-row__card {
+  margin-bottom: 10px;
+}
+
+.card-list > .card:last-child {
+  margin-bottom: 0;
+}
+
+//////////
+// TYPO //
+//////////
+
+.card-title {
+  > a {
+    color: $headings-color;
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-subtitle {
+  color: $text-muted-light;
+  margin-top: -($headings-margin-bottom / 2);
+  text-transform: uppercase;
+  font-size: .707rem;
+  font-weight: 500;
+}
+
+/////////////
+// SPACING //
+/////////////
+
+.card, 
+.card-group {
+  margin-bottom: 1.5rem;
+}
+
+.card-2by1 .card-body {
+  padding: $card-spacer-x/2 $card-spacer-x;
+}
+.card-sm .card-body {
+  padding: $card-spacer-x/2;
+}
+
+// IMAGE
+
+[class*=card-img] {
+  position: relative;
+  height: 200px;
+  object-fit: cover;
+  // @TODO 
+  // https://medium.com/@primozcigler/neat-trick-for-css-object-fit-fallback-on-edge-and-other-browsers-afbc53bbb2c3
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(theme-color('dark'), .125);
+  }
+}
+
+/////////////
+// COLUMNS //
+/////////////
+
+@include media-breakpoint-up(sm) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .card-columns--3 {
+    column-count: $card-columns-count;
+  }
+}
+
+/////////////////////////
+// CARD OPTIONS BUTTON //
+/////////////////////////
+
+.card__options {
+  position: absolute;
+  right: $card-spacer-x;
+  top: $card-spacer-x/2;
+}
+
+///////////////////
+// MEDIA IN CARD //
+///////////////////
+
+.card {
+  .media-left {
+    padding-right: $card-spacer-x/2;
+  }
+  .media-right {
+    padding-left: $card-spacer-x/2;
+  }
+}

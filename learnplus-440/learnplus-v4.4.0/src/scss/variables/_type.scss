@@ -1,0 +1,42 @@
+$body-color:                        #383B3D !default;
+$link-color:                        rgba($primary, .85) !default;
+
+$text-muted:                        #B8BDC2 !default;
+$text-muted-light:                  #B8BDC2 !default;
+
+$font-family-base:                  Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base:                    .9375rem !default;
+$font-size-lg:                      ($font-size-base * 1.25) !default;
+$font-size-sm:                      ($font-size-base * .875) !default;
+$font-weight-bold:                  500 !default;
+
+$line-height-base:                  1.5 !default;
+$line-height-lg:                    1.5 !default;
+$line-height-sm:                    1.5 !default;
+
+$headings-font-family:              "Oswald", "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-weight:              400 !default;
+$headings-margin-bottom:            $spacer !default;
+$headings-line-height:              1.5 !default;
+$headings-color:                    rgba($dark, .84) !default;
+
+$h1-font-size:                      2.827rem !default;
+$h2-font-size:                      1.999rem !default;
+$h3-font-size:                      1.414rem !default;
+$h4-font-size:                      1.414rem !default;
+$h5-font-size:                      1rem !default;
+
+$h1-line-height:                    1.5 !default;
+$h2-line-height:                    1.5 !default;
+$h3-line-height:                    1.414 !default;
+$h4-line-height:                    1.414 !default;
+$h5-line-height:                    1.5 !default;
+
+$display1-size:                     3.998rem !default;
+$display1-weight:                   700 !default;
+$display1-line-height:              1.25 !default;
+
+$lead-font-size:                    ($font-size-base * 1.125) !default;
+$lead-font-weight:                  400 !default;
+$lead-line-height:                  1.556 !default;
+$small-font-size:                   .75rem !default;

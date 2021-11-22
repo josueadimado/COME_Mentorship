@@ -1,0 +1,79 @@
+//////////////////////
+// CUSTOM VARIABLES //
+//////////////////////
+
+@import './variables';
+
+///////////////
+// BOOTSTRAP //
+///////////////
+
+@import 'bootstrap/scss/bootstrap';
+
+//////////////////////
+// CUSTOM LIBRARIES //
+//////////////////////
+
+@import 'material-design-kit/src/style';
+@import 'sidebar-style-guide/sass/style';
+
+/////////////
+// PLUGINS //
+/////////////
+
+@import 'bootstrap-custom-checkbox-toggle/bootstrap-custom-checkbox-toggle';
+@import 'fm-plugin-flatpickr/scss/flatpickr';
+@import 'fm-plugin-chartjs/scss/chartjs';
+@import 'fm-avatar/avatar';
+@import 'fm-loader/loader';
+
+///////////////////////////
+// CUSTOM USER INTERFACE //
+///////////////////////////
+
+@import './type';
+@import './header';
+@import './blockquote';
+@import './breadcrumb';
+@import './button';
+@import './badge';
+@import './card';
+@import './dropdown';
+@import './dropdown-menu-dark';
+@import './footer';
+@import './search';
+@import './forms';
+@import './input-group';
+@import './heading';
+@import './helpers';
+@import './jumbotron';
+@import './layout';
+@import './list-group';
+@import './material-icons';
+@import './media';
+@import './pagination';
+@import './progress';
+@import './tables';
+@import './tabs';
+@import './nav-tabs-card';
+@import './nav-tabs-links';
+@import './modal';
+@import './page-nav';
+@import './hero';
+@import './images';
+@import './preloader';
+@import './icon-holder';
+
+@import './navbar';
+@import './navbar-dark';
+@import './navbar-dark-bg-dark';
+@import './navbar-light';
+
+@import './sidebar';
+@import './sidebar-transparent';
+
+@import './code';
+@import './rating';
+@import './page-separator';
+@import './pages/messages';
+@import './pages/forum';

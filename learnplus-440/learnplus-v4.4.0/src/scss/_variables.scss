@@ -1,0 +1,67 @@
+@import 'sass-md-colors/colors/variables';
+
+/////////////////////////////////////
+// YOUR CUSTOMIZATIONS MAY GO HERE //
+/////////////////////////////////////
+
+// $primary: red !default;
+
+////////////////////////
+// OUR CUSTOMIZATIONS //
+////////////////////////
+
+@import './mixins';
+@import './variables/icons';
+@import './variables/global';
+@import './variables/layout';
+@import './variables/spacers';
+@import './variables/type';
+@import './variables/dropdown';
+@import './variables/forms';
+@import './variables/card';
+@import './variables/list-group';
+@import './variables/nav';
+@import './variables/breadcrumb';
+@import './variables/jumbotron';
+@import './variables/buttons';
+@import './variables/progress';
+@import './variables/sidebar';
+@import './variables/navbar';
+@import './variables/pagination';
+@import './variables/badge';
+@import './variables/table';
+@import './variables/popover';
+@import './variables/alert';
+@import './variables/modal';
+
+///////////////////////
+// DEFAULT VARIABLES //
+///////////////////////
+
+// Bootstrap
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/variables';
+
+// should be in variables/layout
+// temporary fix for map-merge order issues
+
+$grid-breakpoints: (
+  xs: 0,
+  xs-md: 374px,
+  xs-plus: 413px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1366px
+);
+
+// Material Elevation
+@import '@material/elevation/mixins';
+
+// Sidebar style
+@import 'sidebar-style-guide/sass/variables';
+
+// MDK
+@import 'material-design-kit/src/variables';

@@ -1,0 +1,22 @@
+$sizes: (
+  100: 100%,
+  auto: auto,
+  64: 64px
+) !default;
+
+$spacer:                            1rem !default;
+$spacers: (
+  4pt: ($spacer * .25),
+  8pt: ($spacer * .5),
+  12pt: ($spacer * .75),
+  16pt: $spacer,
+  20pt: ($spacer * 1.25),
+  24pt: ($spacer * 1.5),
+  32pt: ($spacer * 2),
+  40pt: ($spacer * 2.5),
+  44pt: ($spacer * 2.75),
+  48pt: ($spacer * 3),
+  64pt: ($spacer * 4),
+  112pt: ($spacer * 7),
+  128pt: ($spacer * 8),
+) !default;

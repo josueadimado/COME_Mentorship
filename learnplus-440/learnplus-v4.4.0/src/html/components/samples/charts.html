@@ -1,0 +1,233 @@
+{% import 'components/hljs.html' as hljs %}
+
+{% macro charts_line_init(area=false) %}
+{% call hljs.component() -%}            
+<div class="chart">
+  <canvas 
+    id="performanceChart" 
+    class="chart-canvas"
+    data-chart-prefix="$"
+    data-chart-suffix="k"{% if area %}
+    data-chart-line-background-color="primary"{% endif %}></canvas>
+</div>
+
+<script>
+  Charts.create('#performanceChart', 'line', options, data)
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_line_options() %}
+{% call hljs.component() -%}
+<script>
+  var options = {}
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_line_data() %}
+{% call hljs.component() -%}
+<script>
+  var data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [{
+      label: "Performance",
+      data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
+    }]
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_doughnut_init() %}
+{% call hljs.component() -%}            
+<div class="chart">
+  <canvas 
+    id="devicesChart" 
+    class="chart-canvas"
+    data-chart-line-background-color="primary.500;success.300;success.100"
+    data-chart-suffix="%"></canvas>
+</div>
+
+<script>
+  Charts.create('#devicesChart', 'doughnut', options, data)
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_doughnut_options() %}
+{% call hljs.component() -%}
+<script>
+  var options = {}
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_doughnut_data() %}
+{% call hljs.component() -%}
+<script>
+  var data = {
+    labels: ["Desktop", "Tablet", "Mobile"],
+    datasets: [{
+      data: [60, 25, 15]
+    }]
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_bar_init() %}
+{% call hljs.component() -%}            
+<div class="chart">
+  <canvas 
+    id="ordersChart" 
+    class="chart-canvas"
+    data-chart-prefix="$"
+    data-chart-suffix="k"
+    data-chart-line-background-color="primary"></canvas>
+</div>
+
+<script>
+  Charts.create('#ordersChart', 'roundedBar', options, data)
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_bar_options() %}
+{% call hljs.component() -%}
+<script>
+  var options = {
+    // Rounded Bar
+    barRoundness: 1.2
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_bar_data() %}
+{% call hljs.component() -%}
+<script>
+  var data = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [{
+      label: "Sales",
+      data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32],
+      barPercentage: 0.5,
+      barThickness: 20
+    }]
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_custom_checkbox_toggle() %}
+{% call hljs.component() -%}
+<div class="custom-control custom-checkbox-toggle">
+  <input 
+    id="chart-switch-toggle"
+    type="checkbox"
+    class="custom-control-input"
+    role="switch"
+    data-toggle="chart" 
+    data-target="#ordersChart" 
+    data-add='{
+      "data":{
+        "datasets":[{
+          "data":[15,10,20,12,7,0,8,16,18,16,10,22],
+          "backgroundColor":"#b2e599",
+          "label":"Affiliate",
+          "barPercentage": 0.5,
+          "barThickness": 20
+        }]
+      }
+    }'
+    checked="">
+  <label 
+    class="custom-control-label" 
+    for="chart-switch-toggle">
+    <span class="sr-only">Show affiliate</span>
+  </label>
+</div>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_radar_init() %}
+{% call hljs.component() -%}
+<div class="chart">
+  <canvas 
+    id="topicIqChart" 
+    class="chart-canvas"
+    data-chart-suffix=" points"
+    data-chart-line-border-color="primary"></canvas>
+</div>
+
+<script>
+  Charts.create('#topicIqChart', 'radar', options, data)
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_radar_options() %}
+{% call hljs.component() -%}
+<script>
+  var options = {
+    elements: {
+      point: {
+        pointStyle: 'circle',
+        radius: 4,
+        hoverRadius: 5,
+        borderWidth: 2
+      }
+    },
+    scale: {
+      ticks: {
+        display: false,
+        beginAtZero: true,
+        maxTicksLimit: 4
+      },
+      gridLines: {
+        color: settings.colors.gray[300]
+      },
+      angleLines: {
+        color: settings.colors.gray[300]
+      },
+      pointLabels: {
+        fontSize: 14
+      }
+    }
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_radar_data() %}
+{% call hljs.component() -%}
+<script>
+  var data = {
+    labels: ["JavaScript", "HTML", "Flinto", "Vue.js", "Sketch", "Priciple", "CSS", "Angular"],
+    datasets: [{
+      label: "Experience IQ",
+      data: [30, 35, 33, 32, 31, 30, 28, 36],
+      pointHoverBorderColor: settings.colors.success[400],
+      pointHoverBackgroundColor: settings.colors.white,
+      borderJoinStyle: 'bevel',
+      lineTension: .1
+    }]
+  }
+</script>
+{%- endcall %}
+{% endmacro %}
+
+{% macro charts_scripts(rounded_bar=false) %}
+{% call hljs.component() -%}
+<!-- Global Settings -->
+<script src="assets/js/settings.js"></script>
+
+<!-- Chart.js Library -->
+<script src="assets/vendor/Chart.min.js"></script>
+
+<!-- Chart.js Wrapper -->
+{% if rounded_bar %}<script src="assets/js/chartjs-rounded-bar.js"></script>
+{% endif %}<script src="assets/js/chartjs.js"></script>
+{%- endcall %}
+{% endmacro %}

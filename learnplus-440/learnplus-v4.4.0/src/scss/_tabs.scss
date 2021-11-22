@@ -1,0 +1,11 @@
+.tab-pane > *:last-child {
+  margin-bottom: 0;
+}
+
+.nav-tabs .nav-link, 
+.nav-pills .nav-link {
+  color: $text-muted;
+  &:hover {
+    color: $primary;
+  }
+}

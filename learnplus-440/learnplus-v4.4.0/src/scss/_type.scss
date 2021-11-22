@@ -1,0 +1,60 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+.text-decoration-0 {
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+.font-size-16pt {
+  font-size: 1rem !important;
+}
+.font-size-20pt {
+  font-size: 1.25rem !important;
+}
+.font-size-24pt {
+  font-size: 1.5rem !important;
+}
+.font-size-32pt {
+  font-size: 2rem !important;
+}
+.font-size-48pt {
+  font-size: 3rem !important;
+}
+.font-size-56pt {
+  font-size: 3.5rem !important;
+}
+.font-size-64pt {
+  font-size: 5 !important;
+}
+
+.measure-paragraph {
+  max-width: 456px;
+}
+.measure-paragraph-max {
+  max-width: 536px;
+}
+.measure-lead {
+  max-width: 536px;
+}
+.measure-lead-max {
+  max-width: 616px;
+}
+.measure-hero-lead {
+ max-width: 696px;
+}
+
+.text-black-20 { color: rgba($body-color, .2) !important; }
+.text-black-50 { color: rgba($body-color, .5) !important; }
+.text-black-70 { color: rgba($body-color, .7) !important; }
+.text-white-70 { color: rgba(white, .7) !important; }
+.text-white-50 { color: rgba(white, .5) !important; }
+.text-white-20 { color: rgba(white, .2) !important; }

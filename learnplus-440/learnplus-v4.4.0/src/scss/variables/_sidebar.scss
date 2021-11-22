@@ -1,0 +1,62 @@
+$sm-toggle-font-size:               1.25rem !default;
+$sm-toggle-icon:                    "\e315" !default;
+$sm-open-toggle-icon:               "\e315" !default;
+
+$sm-icon-spacing-x:                 .5rem !default;
+
+$sidebar-spacing:                   1.5rem !default;
+$sidebar-spacing-x:                 $sidebar-spacing !default;
+$sidebar-spacing-y:                 2rem !default;
+
+$sm-indent-spacing:                 2.25rem !default;
+$ssm-button-height:                 2rem !default;
+
+$sidebar-heading-font-size:         .75rem !default;
+$sidebar-heading-font-weight:       500 !default;
+$sidebar-heading-margin:            .5rem !default;
+$sidebar-heading-line-height:       1.5rem !default;
+
+//////////
+// Dark //
+//////////
+
+$sidebar-dark-text-color:           #DFE2E6 !default;
+$sidebar-dark-link-color:           #8A9299 !default;
+$sidebar-dark-border-color:         rgba(#2E3133, .9) !default;
+
+$sm-dark-button-color:              $sidebar-dark-link-color !default;
+$sm-dark-active-button-color:       #CFDBE6 !default;
+$sm-dark-active-button-bg:          rgba(#262D33, .5) !default;
+$sm-dark-active-icon-color:         $primary !default;
+$sm-dark-open-bg:                   rgba(#262D33, .5) !default;
+$sm-dark-open-icon-color:           $sm-dark-active-button-color !default;
+$sm-dark-hover-button-color:        $sm-dark-active-button-color !default;
+$sm-dark-hover-button-bg:           transparent !default;
+
+$sm-dark-activebuttonbg-button-color:       $sm-dark-active-button-color !default;
+$sm-dark-activebuttonbg-icon-color:         $sm-dark-active-icon-color !default;
+
+$ssm-dark-button-color:             $sm-dark-button-color !default;
+
+///////////
+// Light //
+///////////
+
+$sidebar-light-text-color:          #949799 !default;
+$sidebar-light-link-color:          #B8C2CC !default;
+$sidebar-light-border-color:        rgba(#2E3133, .1) !default;
+$sidebar-light-container-border-color: $border-color !default;
+
+$sm-light-button-color:             $sidebar-light-link-color !default;
+$sm-light-active-button-color:      #8A9299 !default;
+$sm-light-active-button-bg:         rgba(#262D33, .05) !default;
+$sm-light-active-icon-color:        $primary !default;
+$sm-light-open-bg:                  rgba(#262D33, .05) !default;
+$sm-light-open-icon-color:          $sm-light-active-button-color !default;
+$sm-light-hover-button-color:       $sm-light-active-button-color !default;
+$sm-light-hover-button-bg:          transparent !default;
+
+$sm-light-activebuttonbg-button-color:       $sm-light-active-button-color !default;
+$sm-light-activebuttonbg-icon-color:         $sm-light-active-icon-color !default;
+
+$ssm-light-button-color:            $sm-light-button-color !default;

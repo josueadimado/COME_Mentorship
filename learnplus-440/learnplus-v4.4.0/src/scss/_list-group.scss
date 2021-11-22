@@ -1,0 +1,18 @@
+.list-group {
+  margin-bottom: 1.5rem;
+  z-index: 0;
+  position: relative;
+}
+.list-group-fit > .list-group-item {
+  border-left: none;
+  border-right: none;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  &:first-of-type {
+    border-top: none;
+  }
+}
+.card > .list-group:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,43 @@
+.dropdown-menu-dark.dropdown-menu {
+  background-color: $dark;
+  border-color: $navbar-dark-border-color;
+  
+  .dropdown-item {
+    color: $navbar-dark-color;
+  
+    @include hover-focus {
+      color: $navbar-dark-hover-color;
+    }
+
+    &.active,
+    &:active {
+      color: $navbar-dark-active-color;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $navbar-dark-disabled-color;
+    }
+  }
+
+  &::before,
+  &::after {
+    border-bottom-color: $dark;
+  }
+  &::before {
+    border-bottom-color: $navbar-dark-border-color;
+  }
+}
+
+.dropup {
+  .dropdown-menu-dark.dropdown-menu {
+    &::before,
+    &::after {
+      border-bottom-color: transparent;
+      border-top-color: $dark;
+    }
+    &::before {
+      border-top-color: $navbar-dark-border-color;
+    }
+  }
+}

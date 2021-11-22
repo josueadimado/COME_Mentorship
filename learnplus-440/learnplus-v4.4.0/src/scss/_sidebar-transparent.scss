@@ -1,0 +1,21 @@
+// BREAKPOINTS
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-only($breakpoint) {
+    .sidebar-transparent-#{$breakpoint} { 
+      background-color: $body-bg !important;
+      border-color: transparent !important;
+    }
+  }
+  @include media-breakpoint-up($breakpoint) {
+    .sidebar-transparent-#{$breakpoint}-up { 
+      background-color: $body-bg !important;
+      border-color: transparent !important;
+    }
+  }
+  @include media-breakpoint-down($breakpoint) {
+    .sidebar-transparent-#{$breakpoint}-down { 
+      background-color: $body-bg !important;
+      border-color: transparent !important;
+    }
+  }
+}

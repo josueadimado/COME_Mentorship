@@ -1,0 +1,154 @@
+.bg-transparent {
+  background: transparent; 
+}
+.bg-gradient-primary {
+  background-image: linear-gradient(128deg, darken($primary, 10%) 0%, $primary 100%);
+}
+
+//////////////////////
+// BORDER UTILITIES //
+//////////////////////
+
+.border-style-dashed {
+  border-style: dashed !important;
+}
+
+@each $size in (1, 2, 3) {
+  .border-#{$size} {
+    border: #{$size}px solid $border-color !important;
+  }
+  @each $position in (left, right, top, bottom) {
+    .border-#{$position}-#{$size} {
+      border-#{$position}: #{$size}px solid $border-color !important;
+    }
+    .border-#{$position}-#{$size} {
+      border-#{$position}: #{$size}px solid $border-color !important;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+  @each $position in (left, right, top, bottom) {
+    .border-#{$position}-#{$color} {
+      border-#{$position}-color: $value !important;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .border#{$infix}         { border: $border-width solid $border-color !important; }
+    .border-top#{$infix}     { border-top: $border-width solid $border-color !important; }
+    .border-right#{$infix}   { border-right: $border-width solid $border-color !important; }
+    .border-bottom#{$infix}  { border-bottom: $border-width solid $border-color !important; }
+    .border-left#{$infix}    { border-left: $border-width solid $border-color !important; }
+
+    .border#{$infix}-0        { border: 0 !important; }
+    .border-top#{$infix}-0    { border-top: 0 !important; }
+    .border-right#{$infix}-0  { border-right: 0 !important; }
+    .border-bottom#{$infix}-0 { border-bottom: 0 !important; }
+    .border-left#{$infix}-0   { border-left: 0 !important; }
+
+  }
+}
+
+//////////
+// TEXT //
+//////////
+
+.text-base { font-family: $font-family-base !important; }
+
+.text-muted-light {
+  color: $text-muted-light !important;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  white-space: nowrap;
+}
+
+.icon-block {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; 
+  height: 80px;
+  background: #f3f3f3; 
+}
+
+.mb-headings {
+  margin-bottom: $headings-margin-bottom;
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0;
+  }
+}
+
+//////////////
+// POSITION //
+//////////////
+
+.position-absolute-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@each $position in (left, right, top, bottom) {
+  .#{$position}-0 {
+    #{$position}: 0 !important;
+  }
+}
+
+////////////
+// SIZING //
+////////////
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @each $prop, $abbrev in (width: w, height: h) {
+      @each $size, $length in $sizes {
+        .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+      }
+    }
+  }
+}
+
+@each $breakpoint in (xs, xs-md, xs-plus) {
+  @include media-breakpoint-down($breakpoint) {
+    .w-#{$breakpoint}-down-100 {
+      width: 100% !important;
+    }
+  }
+}
+
+//////////////
+// Stacking //
+//////////////
+
+@each $depth in (0, 1, 2, 3) {
+  .z-#{$depth} {
+    z-index: $depth !important;
+  }
+}
+
+/////////////
+// FLEXBOX //
+/////////////
+
+.flex {
+  flex: 1 1 0%;
+}
+.flex-none {
+  flex: none;
+}

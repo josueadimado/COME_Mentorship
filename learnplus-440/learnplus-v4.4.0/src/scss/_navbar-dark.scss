@@ -1,0 +1,55 @@
+/////////////////
+// NAVBAR DARK //
+/////////////////
+
+.navbar-dark {
+
+  &.navbar-expand {
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($next, $grid-breakpoints);
+
+      &#{$infix} {
+        @include media-breakpoint-down($breakpoint) {
+          .navbar-collapse .nav-item {
+            border-top: 1px solid $navbar-dark-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  .badge:not([class*="badge-"]) {
+    background-color: rgba(#262D33, .5);
+  }
+
+  /////////////////
+  // SEARCH FORM //
+  /////////////////
+	
+  .search-form {
+    background-color: rgba(black, .2);
+    color: rgba(white, .5);
+    border-color: rgba(black, .05);
+		.form-control,
+    .form-control::placeholder {
+      color: inherit;
+    }
+    .btn {
+      background-color: transparent;
+      color: inherit;
+    }
+	}
+
+  //////////////////////
+  // INSTRUCTOR STATS //
+  //////////////////////
+	
+  .nav-stats {
+		background: rgba(black, .2);
+    color: #fff;
+		small {
+			opacity: .54;
+		}
+	}
+}

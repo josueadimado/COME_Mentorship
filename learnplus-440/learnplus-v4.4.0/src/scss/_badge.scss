@@ -1,0 +1,19 @@
+///////////////////////////////////////////
+// Override Bootstrap color-yiq contrast //
+///////////////////////////////////////////
+
+.badge-success,
+.badge-warning {
+  color: $white;
+}
+
+.btn .badge {
+  top: 0;
+}
+
+.badge-notifications {
+  border-radius: 100px;
+  padding: 0 .5rem;
+  line-height: 1rem;
+  font-weight: bold;
+}

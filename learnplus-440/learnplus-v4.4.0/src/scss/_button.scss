@@ -1,0 +1,114 @@
+/////////////
+// GENERAL //
+/////////////
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &:not(.btn-lg):not(.btn-sm) {
+    font-size: $btn-font-size-base;
+  }
+}
+
+
+.button-list > .btn,
+.button-list > .btn-group {
+  margin-bottom: .75rem;
+  margin-left: .5rem;
+}
+
+///////////////////////////////////////////
+// Clear default styles from button tags //
+///////////////////////////////////////////
+
+.btn-flush {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  color: inherit;
+}
+
+///////////
+// STYLE //
+///////////
+
+.btn-white {
+  @include button-variant($white, $border-color, $active-background: $white, $active-border: $border-color);
+}
+
+.btn-outline-white {
+  @include button-outline-variant(#fff, $primary);
+}
+
+.btn-default {
+  @extend .btn-white;
+}
+
+///////////////////////////////////////////
+// Override Bootstrap color-yiq contrast //
+///////////////////////////////////////////
+
+.btn-success,
+.btn-warning {
+  @include plain-hover-focus {
+    color: $white;
+  }
+}
+
+//////////////
+// DROPDOWN //
+//////////////
+
+.btn.dropdown-toggle::after {
+  align-self: center;
+}
+
+///////////
+// ICONS //
+///////////
+
+.btn .material-icons {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/////////////
+// ROUNDED //
+/////////////
+
+.btn-rounded {
+  border-radius: 100px;
+}
+
+////////////
+// CIRCLE //
+////////////
+
+.btn-circle {
+  border-radius: 100%;
+  width: $btn-circle-height;
+  height: $btn-circle-height;
+  &.btn-sm {
+    width: $btn-circle-height-sm;
+    height: $btn-circle-height-sm;
+  }
+  &.btn-lg {
+    width: $btn-circle-height-lg;
+    height: $btn-circle-height-lg;
+  }
+}
+
+///////////////////
+// TEXT SPACINGS //
+///////////////////
+
+.btn__icon--left {
+  margin-right: .25rem;
+}
+.btn__icon--right {
+  margin-left: .25rem;
+}

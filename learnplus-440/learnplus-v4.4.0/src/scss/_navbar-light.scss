@@ -1,0 +1,38 @@
+//////////////////
+// NAVBAR LIGHT //
+//////////////////
+
+.navbar-light {
+
+	color: $navbar-light-text-color;
+
+	///////////
+	// BRAND //
+	///////////
+	
+	.navbar-brand {
+		color: $navbar-light-brand-color;
+		.material-icons {
+			color: $primary;
+		}
+	}
+
+	/////////////////
+	// SEARCH FORM //
+	/////////////////
+	
+	.search-form {
+		background: rgba(black, .05);
+		border-color: transparent;
+		.form-control {
+			color: rgba(black, .5);
+		}
+		.btn {
+			color: rgba(black, .5);
+		}
+	}
+
+	.nav-stats {
+		background: rgba(black, .05);
+	}
+}

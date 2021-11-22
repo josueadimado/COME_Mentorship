@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+  & + .lead {
+    margin-top: -5px;
+    margin-bottom: $grid-gutter-width;
+  }
+}
+
+.page-heading {
+  padding: $grid-gutter-width 0;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb + .page-heading {
+  padding-top: 0;
+}
+
+div.page-heading {
+  position: relative;
+  overflow: hidden;
+}

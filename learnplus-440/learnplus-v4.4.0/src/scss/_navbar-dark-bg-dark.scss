@@ -1,0 +1,54 @@
+.navbar-dark.bg-dark {
+  $navbar-dark-brand-color:           #DFE2E6;
+  $navbar-dark-color:                 #8A9299;
+  $navbar-dark-active-color:          #CFDBE6;
+  $navbar-dark-hover-color:           rgba($navbar-dark-active-color, .75);
+
+  .navbar-brand {
+    color: $navbar-dark-brand-color;
+
+    @include hover-focus {
+      color: $navbar-dark-active-color;
+    }
+
+    .material-icons {
+      color: $primary;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+  }
+
+  .navbar-text {
+    color: $navbar-dark-color;
+    a {
+      color: $navbar-dark-active-color;
+
+      @include hover-focus {
+        color: $navbar-dark-active-color;
+      }
+    }
+  }
+}

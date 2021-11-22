@@ -1,0 +1,16 @@
+//////////////////
+// TABS IN CARD //
+//////////////////
+
+.nav-tabs-card {
+  background: $body-bg;
+  .nav-link {
+    border-radius: 0;
+    color: $card-nav-link;
+    &:hover, 
+    &.active {
+      border-color: transparent;
+      color: $card-nav-link-hover;
+    }
+  }
+}

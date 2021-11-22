@@ -1,0 +1,27 @@
+//////////////////////////
+// ICON HOLDER VARIANTS //
+//////////////////////////
+
+@mixin icon-holder-outline-variant($color, $color-hover: #fff) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid $color;
+
+  @include hover {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
+}
+
+@mixin icon-holder-variant($color, $color-hover: #fff) {
+  color: #fff;
+  background-image: none;
+  background-color: $color;
+  border: 1px solid $color;
+
+  @include hover {
+    @include icon-holder-outline-variant($color, $color-hover);
+  }
+}

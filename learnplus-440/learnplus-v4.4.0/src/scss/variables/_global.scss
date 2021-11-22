@@ -1,0 +1,22 @@
+$enable-shadows:                    true !default;
+
+$primary:                           $blue-500 !default;
+$danger:                            $red-500 !default;
+$success:                           $green-400 !default;
+$warning:                           $orange-400 !default;
+$info:                              $light-blue-400 !default;
+$secondary:                         #6B757D !default;
+$dark:                              #39444D !default;
+$accent:                            $green-400 !default;
+
+$gray-light:                        #818A91 !default;
+$gray-dark:                         #383B3D !default;
+
+$body-bg:                           #F5F6F7 !default;
+
+$border-color:                      #F0F1F2 !default;
+$border-width:                      1px !default;
+
+$code-color:                        $primary !default;
+
+$mdc-theme-secondary:               $primary !default;

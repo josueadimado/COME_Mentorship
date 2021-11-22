@@ -1,0 +1,19 @@
+$navbar-height:                     64px !default;
+$navbar-line-height:                $navbar-height !default;
+$navbar-box-shadow:                 0 2px 3px rgba(0,0,0, .2) !default;
+$navbar-toggler-padding-y:          1rem !default;
+$navbar-toggler-padding-x:          0 !default;
+$navbar-nav-link-padding-x:         0 !default;
+$navbar-nav-link-padding-y:         1rem !default;
+
+$navbar-dark-brand-color:           white !default;
+$navbar-dark-toggler-border-color:  transparent !default;
+$navbar-dark-border-color:          rgba(#2E3133, .9) !default;
+
+$navbar-light-color:                #B8C2CC !default;
+$navbar-light-hover-color:          rgba($navbar-light-color, .7) !default;
+$navbar-light-active-color:         #8A9299 !default;
+$navbar-light-disabled-color:       rgba($navbar-light-color, .3) !default;
+
+$navbar-light-text-color:           #949799 !default;
+$navbar-light-brand-color:          $headings-color !default;

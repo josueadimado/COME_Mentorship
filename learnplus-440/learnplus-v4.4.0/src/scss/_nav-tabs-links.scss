@@ -1,0 +1,26 @@
+.nav-tabs-links {
+  border-bottom: 3px solid $nav-tabs-border-color;
+  
+  .nav-item {
+    margin-bottom: -3px;
+    & + .nav-item {
+      margin-left: $nav-link-padding-x;
+    }
+  }
+
+  .nav-link {
+    padding: $nav-link-padding-y 0;
+    color: rgba($body-color, .5);
+    border-bottom: 3px solid transparent;
+
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $body-color;
+    border-color: $primary;
+  }
+}

@@ -1,0 +1,12 @@
+.media-right {
+  padding-left: $grid-gutter-width;
+}
+.media-left {
+  padding-right: $grid-gutter-width;
+}
+.media-body p:last-child {
+  margin-bottom: 0;
+}
+.media {
+  margin-top: 0;
+}
