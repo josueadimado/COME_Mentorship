@@ -6,3 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class CustomUser(AbstractUser):
     phone = models.CharField(max_length=14,null=True,blank=True)
     verified_phone = models.BooleanField(default=False)
+
+
+class Email(models.Model):
+    pass
